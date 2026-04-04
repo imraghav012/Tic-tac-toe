@@ -6,18 +6,14 @@ row3 = [7, 8, 9]
 board = [row1, row2, row3]
 print(board[0][1])
 
-
-
-
-
 def display_board(board):
     print('+-------' * 3 + '+')
     for i in range(3):
-        print('        |       |       ')
-        print('    ' + str(board[i][0]) + '   |   ' + str(board[i][1]) + '   |   ' + str(board[i][2]))
-        print('        |       |       ')
-        if i != 2:
-            print('+-------'*3+'+')
+        print('|       |       |       |')
+        print('|   ' + str(board[i][0]) + '   |   ' + str(board[i][1]) + '   |   ' + str(board[i][2]) + '   |')
+        print('|       |       |       |')
+        print('+-------'*3+'+')
+        
 
 def enter_move(board):
     uMove = input('Enter your move:')
@@ -27,7 +23,6 @@ def enter_move(board):
             for j in range(3):
                 if board[i][j] == uMove:
                     board[i][j] = 'X'
-
     # The function accepts the board's current status, asks the user about their move, 
     # checks the input, and updates the board according to the user's decision.
 '''
